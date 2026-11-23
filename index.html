@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Stock Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Shop Stock Board</h1>
+            <p>Manage your shop products and stock</p>
+        </header>
+
+        <!-- Filter Buttons -->
+        <section class="filters">
+            <h2>Filter Products</h2>
+
+            <div class="buttons">
+                <button id="allBtn">All</button>
+                <button id="inStockBtn">In Stock</button>
+                <button id="cheapBtn">Cheap</button>
+                <button id="expensiveBtn">Expensive</button>
+                <button id="sortBtn">Sort</button>
+                <button id="discountBtn">Discount 10%</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+
+            <label for="categoryFilter">Filter by Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothes">Clothes</option>
+                <option value="food">Food</option>
+            </select>
+        </section>
+
+        <!-- Products List -->
+        <section class="products-section">
+            <h2>Products List</h2>
+
+            <ul id="productsList"></ul>
+
+            <!-- Statistics -->
+            <div class="statistics">
+                <p>Products Shown: 
+                    <span id="productsCount">0</span>
+                </p>
+
+                <p>Total Stock Value: 
+                    <span id="totalValue">0</span> EGP
+                </p>
+
+                <p>Status: 
+                    <span id="status">No products</span>
+                </p>
+
+                <p>Most Expensive Product: 
+                    <span id="mostExpensive">-</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Add Product Form -->
+        <section class="add-section">
+            <h2>Add New Product</h2>
+
+            <form id="productForm">
+
+                <label for="name">Product Name:</label>
+                <input type="text" id="name" placeholder="Enter product name">
+
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="">-- Choose category --</option>
+                    <option value="electronics">electronics</option>
+                    <option value="clothes">clothes</option>
+                    <option value="food">food</option>
+                </select>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" placeholder="Enter price">
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" placeholder="Enter stock">
+
+                <button type="submit" class="add-btn">
+                    Add Product
+                </button>
+
+                <p id="errorMessage"></p>
+
+            </form>
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
